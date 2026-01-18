@@ -83,7 +83,7 @@ const Contact = () => {
               className="border border-[#483522] rounded-xl px-3 py-3
               text-white bg-[#483522] hover:bg-[#6e583f] transition"
             >
-              {loading?"sending":"Send"}
+              {loading?"Sending...":"Send Message"}
             </button>
           </form>
 
