@@ -9,6 +9,7 @@ const Projects = () => {
       title: "EasyMed",
       video: EasyMedVideo,
       tech: ["React.js", "Express.js", "JWT", "MongoDB", "Multer", "Cloudinary"],
+      projectLink:"https://easymed-frontend.onrender.com/",
       description:
         "EasyMed is an online platform that allows patients to book doctor appointments and helps doctors manage their schedules securely. It supports safe logins, role-based access, and smooth handling of multiple users."
     },
@@ -17,6 +18,7 @@ const Projects = () => {
       title: "Ossean",
       video: osseanVideo,
       tech: ["React.js", "Express.js", "JWT", "MongoDB", "GitHub API", "Google Auth"],
+      projectLink: "https://ossean-orcin.vercel.app/",
       description:
         "Ossean is a platform that helps developers discover high-quality and trending open-source projects in one place. Users can explore repositories based on popularity and relevance, making it easier to find projects worth contributing to."
     }
@@ -92,16 +94,32 @@ const Projects = () => {
 
                   <div className="relative z-10  flex items-center justify-center p-12">
                     <div className="relative z-10 h-full flex items-center justify-center p-3">
-  <div className="w-full max-w-full aspect-video flex items-center justify-center">
-    <video
-      src={project.video}
-      muted
-      autoPlay
-      loop
-      playsInline
-      className="w-full object-contain bg-black rounded-lg"
-    />
-  </div>
+  <div className="relative w-full max-w-full aspect-video flex items-center justify-center group">
+
+  {/* VIDEO */}
+  <video
+    src={project.video}
+    muted
+    autoPlay
+    loop
+    playsInline
+    className="w-full object-contain bg-black rounded-lg"
+  />
+
+
+  {/* OVERLAY LINK */}
+  <a
+    href={project.projectLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute inset-0 flex items-center 
+                opacity-0 group-hover:opacity-100
+               transition-opacity duration-300"
+  >
+    
+  </a>
+</div>
+
 </div>
 
                   </div>

@@ -1,49 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  return (
-    <div className="flex flex-row justify-between gap-10 px-10 pt-6">
-      <h2 className="text-3xl font-semibold">R</h2>
+  const [open, setOpen] = useState(false);
 
-      <ul className="flex justify-start gap-4 text-">
-        <li>
-          <a
-            className="text-sm font-medium text-gray-600 
-"
-            href="#home"
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-sm font-medium text-gray-600 
-"
-            href="#projects"
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-sm font-medium text-gray-600 
-"
-            href="#about"
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-sm font-medium text-gray-600 
-"
-            href="#contact"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
+  return (
+    <nav className="px-6 sm:px-10 pt-6 relative z-50">
+      <div className="flex items-center justify-between">
+        {/* LOGO */}
+        <h2 className="text-3xl font-semibold">R</h2>
+
+        {/* DESKTOP MENU */}
+        <ul className="hidden sm:flex gap-6 pt-3">
+          {["Home", "Projects", "About", "Contact"].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="text-sm font-medium text-gray-600 hover:text-black transition"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* MOBILE BUTTON */}
+        <button
+          className="sm:hidden"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          {open ? <X size={26} /> : <Menu size={26} />}
+        </button>
+      </div>
+
+      {/* MOBILE MENU (OVERLAY) */}
+      {open && (
+        <div className="sm:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-6">
+          <ul className="flex flex-col items-center gap-6">
+            {["Home", "Projects", "About", "Contact"].map((item) => (
+              <li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="text-base font-medium text-gray-700"
+                  onClick={() => setOpen(false)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 };
 

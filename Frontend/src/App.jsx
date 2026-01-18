@@ -39,7 +39,7 @@ function App() {
     <>
       <div className=' animate-fade-up' >
 
-      <Navbar/>
+      <Navbar />
       <Home/>
       <Projects/>
       <About/>

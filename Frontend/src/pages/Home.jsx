@@ -3,58 +3,72 @@ import { Download, Mail } from "lucide-react";
 
 const Home = () => {
   return (
-    <div
+    <section
       id="home"
-      className="reveal px-4 min-h-screen flex flex-col justify-center"
+      className="min-h-screen reveal px-6 sm:px-10 lg:px-20 flex flex-col  justify-center"
     >
-      {/* TEXT SECTION */}
-      <div className="flex flex-col items-center text-center">
-        <h1
-          className="font-bold
-          text-5xl
-          mb-10
-          lg:mb-4
-          sm:text-7xl
-          md:text-8xl
-          lg:text-9xl
-          "
-        >
-          ROHIT SHARMA
-        </h1>
+      {/* BIG NAME */}
+      <h1
+        className="font-bold leading-none
+        text-[3.5rem]
+        sm:text-[5rem]
+        md:text-[8.5rem]
+        lg:text-[8.5rem]
+        mb-16"
+      >
+        ROHIT SHARMA
+      </h1>
 
-        <h1 className="font-bold text-neutral-600 text-xl sm:text-3xl md:text-4xl">
-          Turning ideas into
-        </h1>
-        <h1 className="font-bold text-neutral-600 text-xl sm:text-3xl md:text-4xl">
-          Digital
-        </h1>
-        <h1 className="font-bold text-neutral-600 text-xl sm:text-3xl md:text-4xl">
-          Products and Experiences.
-        </h1>
+      {/* BOTTOM CONTENT */}
+      <div className="flex flex-col lg:flex-row justify-between gap-16">
+
+        {/* LEFT CONTENT */}
+        <div className="max-w-md">
+          <p className="text-neutral-600 text-2xl lg:font-bold sm:text-lg leading-relaxed">
+            Computer Science student and aspiring software engineer building
+            scalable web applications with clean, thoughtful code.
+          </p>
+
+          {/* CTA */}
+          <div className="flex gap-6 mt-8">
+            <a
+              href="/Rohit_Sharma_Resume(Branch).pdf"
+              download
+              className="px-6 py-3 rounded-full bg-black text-white font-semibold flex items-center gap-2 transition-all duration-300 ease-out
+hover:scale-[1.05]
+hover:shadow-lg
+active:scale-[0.97]"
+            >
+              Resume <Download size={18} />
+            </a>
+
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-full bg-black text-white font-semibold flex items-center gap-2 transition-all duration-300 ease-out
+hover:scale-[1.05]
+hover:shadow-lg
+active:scale-[0.97]"
+            >
+              Hire me <Mail size={18} />
+            </a>
+          </div>
+        </div>
+
+        {/* RIGHT STATEMENT */}
+        <div className="text-right self-end">
+          <h2 className="font-bold text-neutral-600 leading-tight
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+          >
+            TURN IDEAS
+            <br />
+            INTO DIGITAL
+            <br />
+            PRODUCTS.
+          </h2>
+        </div>
+
       </div>
-
-      {/* BUTTONS */}
-      <div className="flex justify-center gap-6 sm:gap-10 mt-10">
-        <a
-          href="/Rohit_Sharma_Resume(Branch).pdf"
-          download
-          className="px-5 py-3 flex items-center gap-2 rounded-full
-          bg-black text-white text-base sm:text-xl font-semibold"
-        >
-          Resume
-          <Download size={20} />
-        </a>
-
-        <a
-          href="#contact"
-          className="px-5 py-3 flex items-center gap-2 rounded-full
-          bg-black text-white text-base sm:text-xl font-semibold"
-        >
-          Hire me
-          <Mail size={20} />
-        </a>
-      </div>
-    </div>
+    </section>
   );
 };
 
