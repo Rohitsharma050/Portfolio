@@ -8,7 +8,7 @@ import Projects from './pages/Projects'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Footer from './Component/Footer'
-
+import { ToastContainer } from 'react-toastify'
 function App() {
   const [count, setCount] = useState(0)
   useEffect(() => {
@@ -39,6 +39,7 @@ function App() {
     <>
       <div className=' animate-fade-up' >
 
+      <ToastContainer/>
       <Navbar />
       <Home/>
       <Projects/>

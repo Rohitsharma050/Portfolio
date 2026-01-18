@@ -2,12 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import backgroundImage from "../assets/Background.jpg";
 import osseanVideo from "../assets/osseanVideo.mp4";
 import EasyMedVideo from "../assets/EasyMedVideo.mp4";
+import easymedImg from "../assets/EasyMed.png"
+import osseanImg from "../assets/Ossean.png"
 const Projects = () => {
   const projects = [
     {
       id: 1,
       title: "EasyMed",
       video: EasyMedVideo,
+      thumbnail: easymedImg,
       tech: ["React.js", "Express.js", "JWT", "MongoDB", "Multer", "Cloudinary"],
       projectLink:"https://easymed-frontend.onrender.com/",
       description:
@@ -17,6 +20,7 @@ const Projects = () => {
       id: 2,
       title: "Ossean",
       video: osseanVideo,
+      thumbnail: osseanImg,
       tech: ["React.js", "Express.js", "JWT", "MongoDB", "GitHub API", "Google Auth"],
       projectLink: "https://ossean-orcin.vercel.app/",
       description:
@@ -100,6 +104,7 @@ const Projects = () => {
   <video
     src={project.video}
     muted
+    poster={project.thumbnail}
     autoPlay
     loop
     playsInline
