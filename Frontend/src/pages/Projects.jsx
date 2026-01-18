@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import easymed from "../assets/EasyMed.png";
-import ossean from "../assets/Ossean.png";
 import backgroundImage from "../assets/Background.jpg";
 import osseanVideo from "../assets/osseanVideo.mp4";
 import EasyMedVideo from "../assets/EasyMedVideo.mp4";
-
 const Projects = () => {
   const projects = [
     {
