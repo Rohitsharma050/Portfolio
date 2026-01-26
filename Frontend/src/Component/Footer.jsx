@@ -24,7 +24,7 @@ const Footer = () => {
             href="https://github.com/Rohitsharma050"
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-neutral-600"
+            className="text-sm text-neutral-600 hover hover:text-black"
           >
             Github /
           </a>
@@ -32,7 +32,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/rohitsharma50/"
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-neutral-600"
+            className="text-sm text-neutral-600 hover hover:text-black"
           >
             Linkedin /
           </a>
@@ -40,9 +40,9 @@ const Footer = () => {
             href="https://leetcode.com/u/Rohitsharma50/"
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-neutral-600"
+            className="text-sm text-neutral-600 hover hover:text-black"
           >
-            Leetcode /
+            Leetcode 
           </a>
         </div>
 

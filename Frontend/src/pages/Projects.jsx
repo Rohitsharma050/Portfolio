@@ -4,6 +4,8 @@ import osseanVideo from "../assets/osseanVideo.mp4";
 import EasyMedVideo from "../assets/EasyMedVideo.mp4";
 import easymedImg from "../assets/Easymed.png"
 import osseanImg from "../assets/Ossean.png"
+import portfolioImg from "../assets/portfolio.png"
+import portfolioVideo from "../assets/PortfolioVideo.mp4"
 const Projects = () => {
   const projects = [
     {
@@ -25,7 +27,20 @@ const Projects = () => {
       projectLink: "https://ossean-orcin.vercel.app/",
       description:
         "Ossean is a platform that helps developers discover high-quality and trending open-source projects in one place. Users can explore repositories based on popularity and relevance, making it easier to find projects worth contributing to."
+    },
+    {
+      id:3,
+      title:"Portfolio",
+      video : portfolioVideo,
+      thumbnail: portfolioImg,
+      tech: ["React", "Express", "Resend", "Tailwind"],
+      projectLink: "https://rohitsharma50.vercel.app/",
+      description: "A responsive and performance-optimized portfolio website showcasing my skills, projects, and experience, featuring smooth animations, project demos, and a backend-powered contact system for seamless communication."
+
+      
+
     }
+
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
