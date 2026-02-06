@@ -9,7 +9,6 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Footer from './Component/Footer'
 import { ToastContainer } from 'react-toastify'
-import LeetCodeHeatmap from './Component/LeetcodeHeatmap'
 function App() {
   const [count, setCount] = useState(0)
   useEffect(() => {
