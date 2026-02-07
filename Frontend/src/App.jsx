@@ -6,6 +6,8 @@ import Navbar from './Component/Navbar'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import About from './pages/About'
+import DSAStats from './pages/DSAStats'
+import Achievements from './pages/Achievements'
 import Contact from './pages/Contact'
 import Footer from './Component/Footer'
 import { ToastContainer } from 'react-toastify'
@@ -44,6 +46,8 @@ function App() {
       <Home/>
       <Projects/>
       <About/>
+      <DSAStats/>
+      <Achievements/>
       <Contact/>
       <Footer/>
       </div>

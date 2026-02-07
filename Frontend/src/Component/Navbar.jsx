@@ -12,10 +12,10 @@ const Navbar = () => {
 
         {/* DESKTOP MENU */}
         <ul className="hidden sm:flex gap-6 pt-3">
-          {["Home", "Projects", "About", "Contact"].map((item) => (
+          {["Home", "Projects", "About", "Achievements", "Contact"].map((item) => (
             <li key={item}>
               <a
-                href={`#${item.toLowerCase()}`}
+                href={`#${item.toLowerCase().replace(" ", "-")}`}
                 className="text-sm font-medium text-gray-600 hover:text-black transition"
               >
                 {item}
@@ -38,10 +38,10 @@ const Navbar = () => {
       {open && (
         <div className="sm:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-6">
           <ul className="flex flex-col items-center gap-6">
-            {["Home", "Projects", "About", "Contact"].map((item) => (
+            {["Home", "Projects", "About", "DSA Stats", "Achievements", "Contact"].map((item) => (
               <li key={item}>
                 <a
-                  href={`#${item.toLowerCase()}`}
+                  href={`#${item.toLowerCase().replace(" ", "-")}`}
                   className="text-base font-medium text-gray-700"
                   onClick={() => setOpen(false)}
                 >
