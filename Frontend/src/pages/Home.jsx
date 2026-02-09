@@ -10,30 +10,40 @@ const Home = () => {
     >
       {/* Heading */}
       <h1
-        className="font-bold leading-none lg:text-center lg:whitespace-nowrap
-        text-[4.5rem]
-        sm:text-[6rem]
-        md:text-[8rem]
-        lg:text-[9.8rem]
-        -mt-10 mb-16
-        tracking-[-0.04em]"
-      >
-        {"ROHIT SHARMA".split("").map((char, i) => (
-          <motion.span
-            key={i}
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.5,
-              delay: i * 0.05,
-              ease: "easeOut",
-            }}
-            className="inline-block transform transition-transform duration-300 ease-out hover:-translate-y-6"
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
-      </h1>
+  className="
+    font-bold leading-none lg:text-center
+    text-[4.5rem]
+    sm:text-[4rem]
+    md:text-[8rem]
+    lg:text-[9.8rem]
+    -mt-10 mb-16
+    tracking-[-0.04em]
+  "
+>
+  {["ROHIT", "SHARMA"].map((word, wordIndex) => (
+    <span
+      key={wordIndex}
+      className="block lg:inline-block lg:whitespace-nowrap"
+    >
+      {word.split("").map((char, i) => (
+        <motion.span
+          key={i}
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            delay: (wordIndex * 5 + i) * 0.05,
+            ease: "easeOut",
+          }}
+          className="inline-block transform transition-transform duration-300 ease-out hover:-translate-y-6"
+        >
+          {char}
+        </motion.span>
+      ))}
+    </span>
+  ))}
+</h1>
+
 
       <div className="flex flex-col lg:flex-row justify-between gap-16">
         {/* Left Content */}

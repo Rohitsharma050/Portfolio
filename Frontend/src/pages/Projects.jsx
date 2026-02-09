@@ -6,10 +6,22 @@ import easymedImg from "../assets/Easymed.png"
 import osseanImg from "../assets/Ossean.png"
 import portfolioImg from "../assets/portfolio.png"
 import portfolioVideo from "../assets/PortfolioVideo.mp4"
+import visitImg from '../assets/Visit.png'
+import visitVideo from '../assets/visitVideo.mp4'
 const Projects = () => {
   const projects = [
+
     {
-      id: 1,
+      id:1,
+      title:"Visit",
+      video:visitVideo,
+      thumbnail:visitImg,
+      tech:["React Quill","	jsPDF","	html2canvas","DOMPurify","MERN"],
+      projectLink:"https://visit-pied.vercel.app/",
+      description:"Visit is an AI-powered platform that helps students store and structure what they learn online in a Subject → Question → Answer format for quick revision. It also formats notes, beautifies code, and exports structured notes as PDFs."
+    },
+    {
+      id: 2,
       title: "EasyMed",
       video: EasyMedVideo,
       thumbnail: easymedImg,
@@ -19,7 +31,7 @@ const Projects = () => {
         "EasyMed is an online platform that allows patients to book doctor appointments and helps doctors manage their schedules securely. It supports safe logins, role-based access, and smooth handling of multiple users."
     },
     {
-      id: 2,
+      id: 3,
       title: "Ossean",
       video: osseanVideo,
       thumbnail: osseanImg,
@@ -29,16 +41,13 @@ const Projects = () => {
         "Ossean is a platform that helps developers discover high-quality and trending open-source projects in one place. Users can explore repositories based on popularity and relevance, making it easier to find projects worth contributing to."
     },
     {
-      id:3,
+      id:4,
       title:"Portfolio",
       video : portfolioVideo,
       thumbnail: portfolioImg,
       tech: ["React", "Express", "Resend", "Tailwind"],
       projectLink: "https://rohitsharma50.vercel.app/",
       description: "A responsive and performance-optimized portfolio website showcasing my skills, projects, and experience, featuring smooth animations, project demos, and a backend-powered contact system for seamless communication."
-
-      
-
     }
 
   ];
