@@ -7,7 +7,7 @@ import osseanImg from "../assets/Ossean.png"
 import portfolioImg from "../assets/portfolio.png"
 import portfolioVideo from "../assets/PortfolioVideo.mp4"
 import visitImg from '../assets/Visit.png'
-import visitVideo from '../assets/visitVideo.mp4'
+import visitVideo from '../assets/VisitVideo.mp4'
 const Projects = () => {
   const projects = [
 
