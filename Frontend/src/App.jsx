@@ -47,7 +47,6 @@ function App() {
       <Projects/>
       <About/>
       <DSAStats/>
-      <Achievements/>
       <Contact/>
       <Footer/>
       </div>

@@ -12,7 +12,7 @@ const Navbar = () => {
 
         {/* DESKTOP MENU */}
         <ul className="hidden sm:flex gap-6 pt-3">
-          {["Home", "Projects", "About", "Achievements", "Contact"].map((item) => (
+          {["Home", "Projects", "About", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase().replace(" ", "-")}`}
